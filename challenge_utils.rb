@@ -11,11 +11,11 @@ module ChallengeUtils
   def test(input, expected_result)
     result = solve(input)
 
+    input_sample = input.size > 10 ? input.slice(0, 10) + "..." : input
     if result == expected_result
-      input_sample = input.size > 10 ? input.take(10) + "..." : input
       puts "Test passed with input: #{input_sample}"
     else
-      puts %Q(Test failed!\n
+      puts %Q(Test failed with input: #{input_sample}\n
   Expected: #{expected_result.inspect}\n\
     Actual: #{result.inspect}\n\n)
       exit
