@@ -1,11 +1,11 @@
 # advent-of-code-2018
 My solutions to the Advent of Code challenge for 2018: https://adventofcode.com/2018/
 
-To solve any of the challenges, navigate to the day of the challenge you'd like to solve and run the following:
+To solve any of the challenges, navigate to the folder for the corresponding day of the challenge and run the following:
 ```
-ruby solution.rb
+ruby part1.rb
 ```
-Or the following, replacing the day number, from the project root directory:
+OR
 ```
-ruby day01/solution.rb
+ruby part2.rb
 ```

@@ -4,11 +4,11 @@ require_relative "../challenge_utils"
 include ChallengeUtils
 
 def solve(input)
-  input
+  # implementation
 end
 
 # test scenarios
-test("test input", "expected result")
+test("test input", nil)
 
 puts "-"*50, ""
 

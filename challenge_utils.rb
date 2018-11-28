@@ -1,15 +1,13 @@
 module ChallengeUtils
   def read_input(filename)
     caller_path = caller[0].partition(":")[0]
-    input_path  = caller_path.split("/")[0]
-    define_method :input_path do |filename|
-      File.expand_path(filename, input_path)
-    end 
-
-    input = File.readlines(input_path(filename)).map(&:strip)
-    input = input.first if input.size == 1 # unwrap the array if it's just one line
+    input_path  = File.expand_path(filename, caller_path.partition("/")[0])
+    input       = File.readlines(input_path).map(&:strip)
+    input       = input.first if input.size == 1 # unwrap the array if it's just one line
+    input
   end
 
+  # test the solution attempt against the test data sets
   def test(input, expected_result)
     result = solve(input)
 
