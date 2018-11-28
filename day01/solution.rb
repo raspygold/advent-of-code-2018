@@ -1,25 +1,23 @@
 #!/usr/bin/env ruby
-# To produce the solutions, simply enter the directory and run:
-#    ruby solution.rb
 
 class Solution
   require_relative "../solvable"
   include Solvable
 
   define_solution :part1 do |input|
+    # implementation
   end
 
   define_solution :part2 do |input|
+    # implementation
   end
 end
 
 solution = Solution.new
-
-# testing the solution using the provided test cases
-solution.run_tests(
-  part1: [["test input", nil]],
-  part2: [["test input", nil]]
-)
-
+# test scenarios using the samples provided
+solution.test(:part1, "test input", "expected result")
+solution.test(:part2, "test input", "expected result")
+puts "-"*20
 # produce the solution using the challenge input
-solution.solve
+solution.solve(:part1, "input")
+solution.solve(:part2, "input")
